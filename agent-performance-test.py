@@ -43,7 +43,7 @@ def sense_dirt(status):
 
 
 # Test environments in input length for all possible initial dirt configurations and agent locations
-def performance_test(length):
+def performance_test(length=10):
     result = []
     for env in itertools.product('10', repeat=length):
         for location in range(0, len(env)):
@@ -53,4 +53,4 @@ def performance_test(length):
         result)) + ' steps on average')
 
 
-performance_test(10)
+performance_test()
